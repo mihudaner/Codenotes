@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "D:/deeplearning/pseudo_lidar-master/psmnet",
+        "C:/Users/wangkai/Desktop/pythonwork"
+    ]
+}

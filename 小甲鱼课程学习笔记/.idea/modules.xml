@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../Y9000p/long/CNN/CNN/.idea/CNN.iml" filepath="$PROJECT_DIR$/../../../Y9000p/long/CNN/CNN/.idea/CNN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../deeplearning/mm3dnotes/.idea/mm3dnotes.iml" filepath="$PROJECT_DIR$/../../deeplearning/mm3dnotes/.idea/mm3dnotes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pyqt/.idea/pyqt.iml" filepath="$PROJECT_DIR$/../pyqt/.idea/pyqt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../deeplearning/pytorch-handbook/.idea/pytorch-handbook.iml" filepath="$PROJECT_DIR$/../../deeplearning/pytorch-handbook/.idea/pytorch-handbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/小甲鱼课程学习笔记.iml" filepath="$PROJECT_DIR$/.idea/小甲鱼课程学习笔记.iml" />
+    </modules>
+  </component>
+</project>
