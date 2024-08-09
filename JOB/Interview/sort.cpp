@@ -60,7 +60,7 @@ void merge_sort(int l, int r)
 
 void    insert_sort()
 {
-    //
+    ////
 }
 void    heap_sort()
 {
