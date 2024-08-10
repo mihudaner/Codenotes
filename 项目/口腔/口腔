@@ -1,0 +1,269 @@
+[深度学习在口腔医学影像中的应用与挑战](https://junchenglee.com/paper/JIG_2023.pdf)
+
+目前，二维X射线影像（包括咬翼片、根尖片和 全景X光片）、三维点云/网格影像和锥形束计算机 断层扫描影像是三类常用的医学影像。
+
+
+
+![image-20240115164642578](./img/image-20240115164642578.png)
+
+基于这些影 像的处理任务主要聚焦于：1）牙体疾病检测（如龋 齿检测等）；2）牙周疾病检测（如牙周炎、根尖炎 检测等）；3）非牙体疾病检测（如囊肿检测等）； 4）口腔正畸（如牙齿检测与分割、头影检测等）； 5）牙体种植（牙槽骨评估、下牙槽神经识别等）； 6）口腔颌面外科（上下颌骨分割、颌面肿瘤检测等）
+
+![image-20240115164803390](./img/image-20240115164803390.png)
+
+> 近年来，基于根尖片影像，利用深度学习方法
+> 来 检测 牙周 炎和 根尖 炎的 方法 开始 涌现 ：例 如
+> Prajapati等人（2017）采用CNN和迁移学习策略搭建
+> 深度学习模型，利用251张根尖片（其中80张存在龋
+> 齿，110张存在根尖炎，61张存在牙周炎）训练提出
+> 的网络，最终龋齿的识别准确度为87.5%，根尖炎的
+> 识别准确度为90.0%，牙周炎的识别准确度为87.5%；
+> 不过该方法的数据集影像数量较少，为了避免过拟
+> 合问题的影响，Li等人（2022）采用了包含4129张
+> 根尖片的数据集训练基于ResNet-18设计的网络，对
+> 根尖炎的检测准确率为83.67%。
+> 目前，对于基于根尖片的龋齿、牙周炎、根尖
+> 炎检测的研究还没有统一的公开数据集，尽管部分
+> 方法达到了很高的准确率，但是不能否认存在过拟
+> 合问题，这导致模型的泛化能力降低。数据集的数
+> 据数量和质量在很大程度上影响方法的效果，因此
+> 构建统一的大型公开数据集仍亟待解决。
+
+## 大多都是ct的分割任务 
+
+U-NET
+
+CE-NET
+
+等等
+
+![image-20240115192035517](./img/image-20240115192035517.png)
+
+## 检测
+
+### [腾讯8篇](https://blog.csdn.net/y80gDg1/article/details/102512562)
+
+
+
+
+
+### 使用深金字塔推理和多尺度增强器进行仔细的 CT 病变检测
+
+腾讯优图实验室实习时完成的2019
+
+https://github.com/shaoqb/multi_scale_booster
+
+![image-20240115194256468](./img/image-20240115194256468.png)
+
+```
+ pip list
+Package                Version       Editable project location
+---------------------- ------------- -------------------------------------------------------------------------------------------
+addict                 2.4.0
+aliyun-python-sdk-core 2.14.0
+aliyun-python-sdk-kms  2.16.2
+angles                 1.9.13
+ansi2html              1.8.0
+apptools               5.2.1
+attrs                  23.1.0
+backcall               0.2.0
+catkin                 0.8.10
+certifi                2022.12.7
+cffi                   1.15.1
+charset-normalizer     3.2.0
+click                  8.1.7
+colorama               0.4.6
+comm                   0.1.4
+ConfigArgParse         1.7
+configobj              5.0.8
+crcmod                 1.7
+cryptography           41.0.7
+cycler                 0.11.0
+Cython                 3.0.8
+dash                   2.13.0
+dash-core-components   2.0.0
+dash-html-components   2.0.0
+dash-table             5.0.0
+decorator              5.1.1
+envisage               7.0.3
+fastjsonschema         2.18.0
+Flask                  2.2.5
+fonttools              4.38.0
+gencpp                 0.7.0
+geneus                 3.0.0
+genlisp                0.4.18
+genmsg                 0.6.0
+gennodejs              2.0.2
+genpy                  0.6.15
+idna                   3.4
+importlib-metadata     6.7.0
+importlib-resources    5.12.0
+ipython                7.34.0
+ipywidgets             8.1.1
+itsdangerous           2.1.2
+jedi                   0.19.0
+Jinja2                 3.1.2
+jmespath               0.10.0
+joblib                 1.3.2
+jsonschema             4.17.3
+jupyter_core           4.12.0
+jupyterlab-widgets     3.0.9
+kiwisolver             1.4.5
+Markdown               3.4.4
+markdown-it-py         2.2.0
+MarkupSafe             2.1.3
+matplotlib             3.5.3
+matplotlib-inline      0.1.6
+mayavi                 4.8.1
+mdurl                  0.1.2
+mmcv                   1.4.0
+mmcv-full              1.7.2
+mmdet                  0.5.6+8e5155c /home/wangkai/anaconda3/envs/py37/lib/python3.7/site-packages/mmdet-0.5.6+8e5155c-py3.7.egg
+mmengine               0.10.2
+model-index            0.1.11
+mysql-connector-python 8.0.33
+nbformat               5.7.0
+nest-asyncio           1.5.8
+numpy                  1.21.6
+open3d                 0.17.0
+opencv-python          4.9.0.80
+opendatalab            0.0.10
+openmim                0.3.9
+openxlab               0.0.10
+ordered-set            4.1.0
+oss2                   2.17.0
+packaging              23.1
+pandas                 1.1.5
+parso                  0.8.3
+pexpect                4.8.0
+pickleshare            0.7.5
+Pillow                 9.5.0
+pip                    22.3.1
+pkgutil_resolve_name   1.3.10
+platformdirs           4.0.0
+plotly                 5.17.0
+prompt-toolkit         3.0.39
+protobuf               3.20.3
+ptyprocess             0.7.0
+pycocotools            2.0.7
+pycparser              2.21
+pycryptodome           3.20.0
+pyface                 8.0.0
+Pygments               2.16.1
+PyMySQL                1.1.0
+pyparsing              3.1.1
+pyquaternion           0.9.9
+pyrsistent             0.19.3
+PySide2                5.15.2.1
+python-dateutil        2.8.2
+python-qt-binding      0.4.4
+pytz                   2023.3.post1
+PyYAML                 6.0.1
+qt-dotgraph            0.4.2
+qt-gui                 0.4.2
+qt-gui-py-common       0.4.2
+requests               2.28.2
+retrying               1.3.4
+rich                   13.7.0
+rosboost-cfg           1.15.8
+rosclean               1.15.8
+rosgraph               1.16.0
+roslaunch              1.16.0
+roslib                 1.15.8
+roslint                0.12.0
+roslz4                 1.16.0
+rosmake                1.15.8
+rosmaster              1.16.0
+rosparam               1.16.0
+rosunit                1.15.8
+scikit-learn           1.0.2
+scipy                  1.7.3
+setuptools             60.2.0
+shiboken2              5.15.2.1
+six                    1.16.0
+smach                  2.5.2
+smclib                 1.8.6
+tabulate               0.9.0
+tenacity               8.2.3
+termcolor              2.3.0
+terminaltables         3.1.10
+threadpoolctl          3.1.0
+tomli                  2.0.1
+torch                  1.8.0+cu111
+torchvision            0.9.0
+tqdm                   4.65.2
+traitlets              5.9.0
+traits                 6.4.2
+traitsui               8.0.0
+typing_extensions      4.7.1
+urllib3                1.26.18
+vtk                    9.2.6
+wcwidth                0.2.6
+Werkzeug               2.2.3
+wheel                  0.38.4
+widgetsnbextension     4.0.9
+yapf                   0.40.2
+zipp                   3.15.0
+
+
+
+修改  .test 为costom
+需要compile.sh
+```
+
+失败了，版本太老了
+
+
+
+
+
+
+
+### [Caries-and-periapical-periodontitis-detection](https://github.com/Evassa5424/Caries-and-periapical-periodontitis-detection/tree/main)
+
+在本研究中，我们提出了一种基于改进的 ResNet 主干网 [12] 的自动化深度学习方法，用于检测龋齿和根尖周炎
+
+
+
+
+
+### A Sequential Framework for Detection and Classification of Abnormal Teeth in Panoramic X-rays
+
+https://paperswithcode.com/paper/a-sequential-framework-for-detection-and
+
+![image-20240115200513071](./img/image-20240115200513071.png)
+
+
+
+```
+
+```
+
+
+
+
+
+### DENTEX CHALLENGE 2023
+
+### https://github.com/ibrahimethemhamamci/dentex
+
+
+
+
+
+
+
+### [YOLORTHO](https://github.com/BigMX/YOLORTHO)
+
+
+
+
+
+### ![楼主头像](https://avatars.githubusercontent.com/u/56261296?s=48&v=4)**[DentexSegAndDet](https://github.com/xyzlancehe/DentexSegAndDet)**
+
+![image-20240115202214424](./img/image-20240115202214424.png)
+
+![image-20240115202232458](./img/image-20240115202232458.png)
+
+
+
+https://arxiv.org/pdf/2308.14161.pdf

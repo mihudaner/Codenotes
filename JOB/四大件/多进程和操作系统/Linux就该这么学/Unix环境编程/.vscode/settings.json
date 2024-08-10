@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "dirent.h": "c",
+        "apue.h": "c",
+        "limits.h": "c",
+        "syslimits.h": "c",
+        "errno.h": "c",
+        "memory": "c",
+        "random": "c",
+        "optional": "c",
+        "fcntl.h": "c"
+    }
+}

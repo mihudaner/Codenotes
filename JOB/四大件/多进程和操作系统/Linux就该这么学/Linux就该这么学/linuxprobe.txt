@@ -1,0 +1,19 @@
+总用量 64568
+drwxrwxr-x 10 wangkai wangkai     4096 12月 27 22:21 ./
+drwxr-xr-x 51 wangkai wangkai     4096 12月 27 15:59 ../
+drwxrwxr-x  4 wangkai wangkai     4096 12月 27 22:20 多进程和操作系统/
+-rw-rw-r--  1 wangkai wangkai  7309970 12月 26 22:12 多进程和操作系统.zip
+drwxrwxr-x  4 wangkai wangkai     4096 12月 27 16:46 方向/
+drwxrwxr-x  5 wangkai wangkai     4096 11月 22 16:05 项目/
+drwxrwxr-x  3 wangkai wangkai     4096 10月 24 10:37 acwing/
+drwxrwxr-x  3 wangkai wangkai     4096 12月 14 22:26 HTML/
+drwxrwxr-x  4 wangkai wangkai     4096 12月 15 10:25 Leecode/
+-rwxrwxrwx  1 wangkai wangkai 16346422 4月  22  2022 Linux高性能服务器编程 - 游双.pdf*
+-rw-r--r--  1 root    root           9 12月 27 16:26 linuxprobe
+-rw-rw-r--  1 wangkai wangkai 23335661 12月 22 10:23 LinuxProbe.pdf
+-rw-rw-r--  1 wangkai wangkai        0 12月 27 22:22 linuxprobe.txt
+-rw-r--r--  1 wangkai wangkai   417792 12月 25 18:42 .readme.txt.swo
+-rw-r--r--  1 wangkai wangkai    16384 12月 25 21:28 .readme.txt.swp
+drwxrwxr-x  3 wangkai wangkai     4096 12月 22 13:12 Socket/
+-rw-rw-r--  1 wangkai wangkai 18640050 12月 15 10:31 STL源码剖析.pdf
+drwxrwxr-x  3 wangkai wangkai     4096 12月 27 22:10 THU第一次调试总结/
