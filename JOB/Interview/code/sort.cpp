@@ -134,7 +134,7 @@ void  heap_sort()
 }
 
 
-int main()
+int mains()
 {
     string line;
     getline(std::cin, line); // 读取一行文本
