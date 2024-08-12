@@ -2990,11 +2990,96 @@ priority_queue<int,vector<int>,greater<int>> q
 
 
 
+## 对称的二叉树
+
+```c
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool isbd(TreeNode*a, TreeNode*b)
+    {
+        if(a==nullptr||b==nullptr)
+        {
+            return(a==nullptr&&b==nullptr);
+        }
+        if(a->val!=b->val) return false;
+        return isbd(a->left,b->right)&&isbd(a->right,b->left);
+        
+    }
+
+    bool isSymmetric(TreeNode* root) {
+        return isbd(root->left,root->right);
+    }
+};
+```
 
 
 
+## 之字形打印
 
-
+```c
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> printFromTopToBottom(TreeNode* root) {
+        stack<TreeNode*>  st;
+        stack<TreeNode*> temp;
+        st.push(root);
+        vector<vector<int>>  res;
+        //res.push_back({root->val});
+        vector<int> row;
+        bool left = true;
+        while(!st.empty())
+        {
+            
+            TreeNode* t = st.top();
+            st.pop();
+            if(t!=nullptr)
+            {
+                if(left)
+                {
+                    temp.push(t->left);
+                    temp.push(t->right);
+                }
+                else {
+                     temp.push(t->right);
+                     temp.push(t->left);
+                }
+                row.push_back(t->val);
+            }
+            if(st.empty())
+            {
+                left = !left;
+                res.push_back(row);
+                row.clear();
+                st = temp;
+                temp = stack<TreeNode*>();
+            }
+           
+        }
+        res.pop_back();
+        return res;
+    }
+};
+```
 
 
 
