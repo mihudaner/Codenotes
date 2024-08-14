@@ -3081,19 +3081,199 @@ public:
 };
 ```
 
+## 二叉树打印成多行
+
+```c
+/**
+ * struct TreeNode {
+ *	int val;
+ *	struct TreeNode *left;
+ *	struct TreeNode *right;
+ *	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ * };
+ */
+#include <vector>
+class Solution {
+public:
+    /**
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     *
+     * 
+     * @param pRoot TreeNode类 
+     * @return int整型vector<vector<>>
+     */
+    vector<vector<int> > Print(TreeNode* pRoot) {
+        // write code here
+        vector<TreeNode*> temp;
+        vector<TreeNode*> row;
+        temp.push_back(pRoot);
+        vector<vector<int>> res;
+        while(!temp.empty())
+        {
+            row = temp;
+            temp.clear();
+            vector<int> rowval;
+            for(auto nd:row)
+            {
+                if(nd==nullptr) continue;
+                rowval.push_back(nd->val);
+                temp.push_back(nd->left);
+                temp.push_back(nd->right);
+            }
+            res.push_back(rowval);
+        }
+        res.pop_back();
+        return res;
+    }
+};
+```
 
 
 
+## 序列换二叉树
+
+```c
+/*
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x) :
+            val(x), left(NULL), right(NULL) {
+    }
+};
+*/
+#include <cstdio>
+#include <algorithm>
+#include <numeric>
+
+class Solution {
+
+public:
+    string SerializeCode(TreeNode *root)
+    {
+        string res;
+        if(root==nullptr) return "#!";
+        string l = SerializeCode(root->left);
+        string r = SerializeCode(root->right);
+        res =  to_string(root->val) + "!" + l+r;
+        //cout << res<< endl;
+        return res;
+    }
+    char* Serialize(TreeNode *root) {       
+        
+        string s = SerializeCode(root);
+        char* res = new char[s.size()+1];
+        for(int i=0;i<s.size();i++)
+        {
+            res[i] = s[i];
+        }
+        return res;
+    }
+    TreeNode* Deserializecode(char * &str) {
+
+        if(*str=='#')
+        {   
+            str++;
+            return nullptr;
+        }
+        int val = 0;
+        while(*str!='!')
+        {
+            val = val * 10 + *(str++) - '0';
+        }
+        //cout << val <<endl;
+        TreeNode* head = new TreeNode(val);
+        head->left  = Deserialize(++str);
+        head->right = Deserialize(++str);
+        return head;
+    }
+    TreeNode* Deserialize(char * &str) {
+        return Deserializecode(str);
+    }
+};
+```
+
+## [二叉搜索树中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
 
 
 
+```c
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    struct cmp
+    {
+        bool operator()(int a,int b)
+        {
+            return a>b;
+        }
+    };
+    int kthSmallest(TreeNode* root, int k) {
+        priority_queue<int,vector<int>,cmp> q;
+        queue<TreeNode*> t;
+        t.push(root);
+        while(!t.empty())
+        {
+            TreeNode* nd= t.front();
+            t.pop();
+            if(nd==nullptr) continue;
+            cout << nd->val <<endl;
+            q.push(nd->val);
+            t.push(nd->left);
+            t.push(nd->right);
+            
+        }
+        while(k-->1)
+        {
+            q.pop();
+        }
+        return q.top();
+    }
+};
+```
 
+**阿秀ans:**这是搜索树，是有序的，我当全无序做的
 
+中序遍历
 
-
-
-
-
+```c
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int midsearch(TreeNode* root, int &k)
+    {
+        if(root==nullptr||k<=0) return -1;
+        int t = midsearch(root->left,k);
+        if(t!=-1) return t;
+        if(--k==0) return root->val;
+        return midsearch(root->right,k);
+    }
+    int kthSmallest(TreeNode* root, int k) {
+       return midsearch(root,k);
+    }
+};
+```
 
 
 
