@@ -2,35 +2,40 @@
 using namespace std;
 
 template<class T>
-class Node
+class Shareptr
 {
 public:
-    Node(){
+    Shareptr(){
         cnt = new int(1);
     };
-    Node(T other):{
+    Shareptr(T other):{
         ptr = new T(other)
         cnt = new int(1);
     };
-    Node(const Node& other){
+    Shareptr(const Shareptr& other){
         ptr = new T(*other.ptr);
-        cnt = other->cnt;
+        cnt = new int(1);
     };
-    ~Node(){
+    ~Shareptr(){
         if(--(*cnt)==0)
         {
             delete ptr;
             delete cnt;
         }
     };
-    Node(const Node&& other){
+    Shareptr(const Shareptr&& other){
         ptr = other.ptr;
         delete other.ptr;
         other.ptr = nullptr;
         cnt = *(other.cnt);
     };
-    operator=(const Node& other)
+    operator=(const Shareptr& other)
     {
+        if(--(*cnt)==0)
+        {
+            delete ptr;
+            delete cnt;
+        }
         ptr = other.ptr;
         cnt = ++*(other->cnt);
     };
@@ -38,13 +43,3 @@ private:
     T* ptr;
     int* cnt;
 };
-
-int main()
-{
-    Node* a = new Node(1);
-    Node* a1 = new Node(2);
-    Node* a2 = new Node(3);
-    Node* a3 = new Node(4);
-    Node* a4 = new Node(5);
-    return 0;
-}
