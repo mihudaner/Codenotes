@@ -3243,6 +3243,8 @@ public:
 };
 ```
 
+超时了
+
 **阿秀ans:**这是搜索树，是有序的，我当全无序做的
 
 中序遍历
@@ -3277,11 +3279,85 @@ public:
 
 
 
+## 数据流的中位数
+
+```c
+class Solution {
+private:
+    int count = 0;
+    priority_queue<int,vector<int>,less<int>> left_big;
+    priority_queue<int,vector<int>,greater<int>> right_small;
+public:
+    void Insert(int num)
+    {
+        count++;
+        if(count%2 == 1){ //奇数
+            right_small.push(num);
+            left_big.push(right_small.top());
+            right_small.pop();
+        }else{
+            
+            left_big.push(num);
+            right_small.push(left_big.top());
+            left_big.pop();
+        }
+    }
+
+    double GetMedian()
+    { 
+    
+        if(count %2 == 1) return left_big.top();
+        else{
+            return double((left_big.top() + right_small.top())/2.0);
+        }
+    }
+
+};
+
+```
+
+坐标大根堆，右边小根堆，但是要求左边所有数字小于右边，
+
+所以每次插入后如果是奇数，就先插入右边小根堆，再把右顶移到左边
+
+所以每次插入后如果是偶数，就先插入左边大根堆，再把左顶移到右边
 
 
 
+## 滑动窗口的最大值
 
+```c
+#include <queue>
+#include <utility>
+class Solution {
+public:
+    /**
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     *
+     * 
+     * @param num int整型vector 
+     * @param size int整型 
+     * @return int整型vector
+     */
+    typedef pair<int,int> PII;
+    vector<int> maxInWindows(vector<int>& num, int size) {
+        // write code here
+        deque<PII> q;
+        vector<int> res;
+        if(size==0||num.size()<size) return {};
+        for(int i=0;i<num.size();i++)
+        {
+            //for(auto x:q) cout << x.first ;
+            while(!q.empty()&&q.back().first<num[i]) q.pop_back();
+            while(!q.empty()&&(q.front().second<=i-size)) q.pop_front();
+            q.push_back({num[i],i});
+            //for(auto x:q) cout << x.first ;
+            //cout << endl;
+            if(i>=size-1) res.push_back(q.front().first);
+        }
+        return res;
+    }
+};
+```
 
-
-
-
+md!怎么一些细节不严谨的错误找不到，debug太弱了
