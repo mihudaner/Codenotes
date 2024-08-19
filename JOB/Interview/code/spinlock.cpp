@@ -41,18 +41,18 @@ void thread_fun(MySpinLock &lock)
     lock.unlock();
 }
 
-int mainsp()
-{
-    cout << "spinbox" << endl;
-    MySpinLock lock;
+// int main()
+// {
+//     cout << "spinbox" << endl;
+//     MySpinLock lock;
 
-    thread myThread1(thread_fun, ref(lock));
-    thread myThread2(thread_fun, ref(lock));
+//     thread myThread1(thread_fun, ref(lock));
+//     thread myThread2(thread_fun, ref(lock));
 
-    myThread1.join();
-    myThread2.join();
+//     myThread1.join();
+//     myThread2.join();
 
-    return 0;
-}
+//     return 0;
+// }
 
 // 1 2 3 42 41

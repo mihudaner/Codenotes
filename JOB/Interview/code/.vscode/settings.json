@@ -47,6 +47,7 @@
         "queue": "cpp",
         "condition_variable": "cpp",
         "functional": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "shared_mutex": "cpp"
     }
 }

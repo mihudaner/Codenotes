@@ -3361,3 +3361,197 @@ public:
 ```
 
 md!怎么一些细节不严谨的错误找不到，debug太弱了
+
+## 矩阵中的路径
+
+```c
+class Solution {
+public:
+    typedef pair<int,int> PII;
+    int n,m;
+    bool has(vector<vector<char>>& matrix, string str,PII start,vector<vector<bool>>&flag)
+    {
+       
+        if(str=="") return true;
+        int x = start.first;
+        int y = start.second;
+        if(x<0||x>=n||y<0||y>=m||flag[x][y]) return false;
+        //cout << x << y << str << endl;
+        bool ret = false;
+        if(str[0]!=matrix[x][y]) return false;
+        if(str.size()==1) return true;
+       
+        flag[x][y] = true;
+        ret = has(matrix,str.substr(1),{x-1,y},flag);
+        if(ret) return true;
+ 
+        ret = has(matrix,str.substr(1),{x+1,y},flag);
+        if(ret) return true;
+       
+        ret =has(matrix,str.substr(1),{x,y-1},flag);
+        if(ret) return true;
+
+        ret =has(matrix,str.substr(1),{x,y+1},flag);
+        if(ret) return true;
+        
+        flag[x][y] = false;
+        return false;
+    
+    }
+    bool hasPath(vector<vector<char>>& matrix, string &str) {
+        if(!matrix.size()||!matrix[0].size()) return false;
+        n = matrix.size(), m = matrix[0].size();
+        vector<vector<bool>> flag(n+1,vector<bool>(m+1));
+        for(int i=0;i<matrix.size();i++)
+        {
+            for(int j=0;j<matrix[0].size();j++)
+            {
+                if(has(matrix,str,{i,j},flag)) return true;
+            }
+        }
+        return false;
+    }
+};
+```
+
+太啰嗦了，这种==四个方向移动的题目==，后面稍微优化了一下
+
+**阿秀ans:**
+
+```c
+/*参数说明  k 字符串索引初始为0即先判断字符串的第一位*/
+bool judge(char* matrix, int rows, int cols, int i, int j, char* str, int k, bool* flag)
+{
+	//因为是一维数组存放二维的值，index值就是相当于二维数组的（i，j）在一维数组的下标
+	int index = i * cols + j;
+	//flag[index]==true,说明被访问过了，那么也返回true;
+	if (i < 0 || i >= rows || j < 0 || j >= cols || matrix[index] != str[k] || flag[index] == true)
+		return false;
+	//字符串已经查找结束，说明找到该路径了
+	if (str[k + 1] == '\0') return true;
+	//向四个方向进行递归查找,向左，向右，向上，向下查找
+	flag[index] = true;//标记访问过 //要走的第一个位置置为true，表示已经走过了0
+
+	  //回溯，递归寻找，每次找到了就给k加一，找不到，还原
+	if (judge(matrix, rows, cols, i - 1, j, str, k + 1, flag)
+		|| judge(matrix, rows, cols, i + 1, j, str, k + 1, flag)
+		|| judge(matrix, rows, cols, i, j - 1, str, k + 1, flag)
+		|| judge(matrix, rows, cols, i, j + 1, str, k + 1, flag))
+	{
+		return true;
+	}
+
+	//走到这，说明这一条路不通，还原，再试其他的路径
+	flag[index] = false;
+	return false;
+}
+
+bool hasPath(char* matrix, int rows, int cols, char* str)
+{
+	if (matrix == NULL || rows < 1 || cols < 1 || str == NULL) return false;
+	bool* flag = new bool[rows * cols];
+	memset(flag, false, rows * cols);
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			if (judge(matrix, rows, cols, i, j, str, 0, flag))
+			{
+				return true;
+			}
+		}
+	}
+	delete[] flag;
+	return false;
+}
+
+```
+
+## **机器人的运动范围**
+
+```c
+#include <vector>
+class Solution {
+public:
+    bool sumbit(int x,int y,int threshold)
+    {
+        int sum=0;
+        while(x)
+        {
+             sum+=x%10;
+             x/=10;
+        }
+        while(y)
+        {
+             sum+=y%10;
+             y/=10;
+        }
+        if(sum>threshold) return false;
+        return true;
+    }
+    int movingCount(int threshold, int rows, int cols) {
+        typedef pair<int,int> PII;
+        queue<PII> q;
+        vector<vector<bool>> flag(rows,vector<bool>(cols));
+        q.push({0,0});
+        int res=0;
+        while(!q.empty())
+        {
+            
+            int x = q.front().first;
+            int y = q.front().second;
+            q.pop();
+            if(x<0||x>rows-1||y<0||y>cols-1) continue;
+            if(flag[x][y]) continue;
+            flag[x][y] = true;
+            if(!sumbit(x,y,threshold)) continue;
+            res++;
+            q.push({x-1,y});
+            q.push({x+1,y});
+            q.push({x,y-1});
+            q.push({x,y+1});
+        }
+        return res;
+    }
+};
+```
+
+
+
+## 剪绳子
+
+```c
+#include <vector>
+class Solution {
+public:
+    /**
+     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+     *
+     * 
+     * @param n int整型 
+     * @return int整型
+     */
+     //这种题目枚举时间就爆炸了
+     //dp 
+    vector<int> dp = vector<int>(61,0);
+
+    int cutRope(int n) {
+        // write code here
+        if(n==2) return 1;
+        if(n==3) return 2;
+        dp[1]= 1;
+        for(int i=2;i<=n;i++)
+        {
+            dp[i] = max(dp[i],i);
+            for(int j=1;j<i-1;j++)
+            {
+               
+                dp[i] = max(dp[j]*dp[i-j],dp[i]);
+                //cout << i << " " <<j << " " <<dp[i] <<endl;
+            }
+        }
+        return dp[n];
+    }
+};
+```
+

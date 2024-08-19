@@ -101,16 +101,16 @@ void ThreadPool::addTask(Task* task)
 }
  
 
-int main()
-{
-    ThreadPool pool(4);   // 创建一个包含4个线程的线程池
-    cout << 1 <<endl;
-    // 添加任务到线程池
-    for(int i = 0; i < 8; ++i)
-    {
-        pool.addTask(new Task());
-    }
-    cout << 1 <<endl;
-    return 0;
-}
+// int main()
+// {
+//     ThreadPool pool(4);   // 创建一个包含4个线程的线程池
+//     cout << 1 <<endl;
+//     // 添加任务到线程池
+//     for(int i = 0; i < 8; ++i)
+//     {
+//         pool.addTask(new Task());
+//     }
+//     cout << 1 <<endl;
+//     return 0;
+// }
 

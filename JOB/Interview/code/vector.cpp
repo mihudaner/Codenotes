@@ -157,7 +157,7 @@ void print_vector(const vector<int> &v)
     std::cout << endl;
 }
 
-int mainv()
+int main()
 {
     string line;
     getline(std::cin, line);      // 读取一行文本

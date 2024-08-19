@@ -1,45 +1,47 @@
-#include<iostream>
+
+#include <atomic>
+#include "mingw.thread.h"
+#include <iostream>
+#include <sstream>
 using namespace std;
-
-
-class Node
+enum type
 {
-public:
-    Node(int x):val(x){};
-    Node* next = nullptr;
-    int val;
+    Txt,
+    Picture,
+    Video,
 };
 
-Node* reverse(Node* head)
+class ISplitter
 {
-    Node* pre = nullptr;
-    Node* nd;
-    while(head!=nullptr)
-    {
-        nd = head->next;
-        head->next = pre;
-        pre = head;
-        head = nd;
-    }
-    return pre;
-}
 
-int main()
+};
+class TxtSplitter: public ISplitter {
+
+};
+
+class PictureSplitter: public ISplitter {
+
+};
+
+class VideoSplitter: public ISplitter {
+
+};
+
+class Factory
 {
-    Node* a = new Node(1);
-    Node* a1 = new Node(2);
-    Node* a2 = new Node(3);
-    Node* a3 = new Node(4);
-    Node* a4 = new Node(5);
-    a->next = a1;
-    a1->next = a2;
-    a2->next = a3;
-    a3->next = a4;
-    a = reverse(a);
-    while(a!=nullptr)
+    ISplitter* getsplit(type type)
     {
-        cout << a->val <<endl;
-        a = a->next;
+        switch(type)
+        {
+            case Txt:
+                return new TxtSplitter();
+            case Picture:
+                return new TxtSplitter();
+            case Video:
+                return new TxtSplitter();
+            default:
+                return nullptr;
+        }
     }
-    return 0;
-}
+};
+

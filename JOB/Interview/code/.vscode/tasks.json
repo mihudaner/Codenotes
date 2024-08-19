@@ -10,7 +10,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\output\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -30,7 +30,7 @@
             "command": "cmd",
             "args": [
                 "/c",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe < input.txt"
+                "${fileDirname}\\output\\${fileBasenameNoExtension}.exe < input.txt"
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -134,38 +134,38 @@ void  heap_sort()
 }
 
 
-int mainso()
-{
-    string line;
-    getline(std::cin, line); // 读取一行文本
-    std::istringstream iss(line); // 将行文本放入字符串流中
-    int num;
-    vector<int> row_nums;
-    while (iss >> num)
-    {                        // 从字符串流中读取数字
-        row_nums.push_back(num); // 将数字添加到向量中
-    }
-    n = row_nums.size();
-    print_vector(row_nums);
-    print_vector(nums);
+// int main()
+// {
+//     string line;
+//     getline(std::cin, line); // 读取一行文本
+//     std::istringstream iss(line); // 将行文本放入字符串流中
+//     int num;
+//     vector<int> row_nums;
+//     while (iss >> num)
+//     {                        // 从字符串流中读取数字
+//         row_nums.push_back(num); // 将数字添加到向量中
+//     }
+//     n = row_nums.size();
+//     print_vector(row_nums);
+//     print_vector(nums);
 
-    nums = row_nums;
-    quiksort(0, nums.size() - 1);
-    print_vector(nums);
+//     nums = row_nums;
+//     quiksort(0, nums.size() - 1);
+//     print_vector(nums);
 
-    nums = row_nums;
-    merge_sort(0, nums.size() - 1);
-    print_vector(nums);
+//     nums = row_nums;
+//     merge_sort(0, nums.size() - 1);
+//     print_vector(nums);
 
-    nums = row_nums;
-    insert_sort();
-    print_vector(nums);
+//     nums = row_nums;
+//     insert_sort();
+//     print_vector(nums);
 
-    nums = row_nums;
-    heap_sort();
-    print_vector(nums);
-    return 0;
-}
+//     nums = row_nums;
+//     heap_sort();
+//     print_vector(nums);
+//     return 0;
+// }
 
 // 1 2 3 42 41
 
