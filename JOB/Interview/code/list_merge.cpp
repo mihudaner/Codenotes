@@ -35,27 +35,27 @@ myList* merge(myList* head1,myList* head2)
 
 }
 
-int main(void) {
+// int main(void) {
 
-    myList* node0 = new myList(0);
-    myList* node1 = new myList(1);
-    myList* node2 = new myList(2);
-    myList* node3 = new myList(3);
+//     myList* node0 = new myList(0);
+//     myList* node1 = new myList(1);
+//     myList* node2 = new myList(2);
+//     myList* node3 = new myList(3);
 
-    myList* node4 = new myList(1);
-    myList* node5 = new myList(4);
-    node0->next = node1;
-    node1->next = node2;
-    node2-> next= node3;
-    node3->next = nullptr;
-    node4->next = node5;
-    node5->next = nullptr;
+//     myList* node4 = new myList(1);
+//     myList* node5 = new myList(4);
+//     node0->next = node1;
+//     node1->next = node2;
+//     node2-> next= node3;
+//     node3->next = nullptr;
+//     node4->next = node5;
+//     node5->next = nullptr;
 
-    auto node = merge(node0, node4);
-    while (node != nullptr) {
-        cout << node->val << endl;
-        node = node->next;
-    }
+//     auto node = merge(node0, node4);
+//     while (node != nullptr) {
+//         cout << node->val << endl;
+//         node = node->next;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
