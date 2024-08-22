@@ -1563,6 +1563,91 @@ int main()
 
 ```
 
+二刷，不加第一个哨兵使得i从1开始
+
+==idx必须表示是包括第i个字符的公共前后缀长度==
+
+j表示已经匹配的位置
+
+```c
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int n = haystack.size(), m = needle.size();
+        vector<int> idx(m,-1);//存的是包括第i个字符的公共前后缀长度
+        idx[0] = -1;
+        int j =-1;
+        for(int i=1;i<m;i++)
+        {
+            while(j!=-1&&needle[i]!=needle[j+1])
+            {
+                j = idx[j];
+            }
+            if(needle[i]==needle[j+1]) j++;
+            idx[i]=j;
+        }
+        j=-1;
+        for(auto x:idx) cout <<x<<endl;
+        for(int i=0;i<n;i++)
+        {
+            if(haystack[i]==needle[j+1]) 
+            {
+                if(++j==m-1) return i-m+1;
+            }
+            else
+            {
+                while(j!=-1&&haystack[i]!=needle[j+1]) j = idx[j];
+                if(haystack[i]==needle[j+1]) j++;
+            }
+        }
+       
+        return -1;
+    }
+};
+```
+
+j表示待匹配的位置
+
+```c
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int n = haystack.size(), m = needle.size();
+        vector<int> idx(m,0);//存的是包括第i个字符的公共前后缀长度
+        idx[0] = 0;
+        int j =0;
+        for(int i=1;i<m;i++)
+        {
+           
+            while(j>=1&&needle[i]!=needle[j])
+            {
+                j = idx[j-1];
+            }
+            if(needle[i]==needle[j]) idx[i] = ++j;
+            else  idx[i] = j;
+            
+        }
+        j=0;
+        for(auto x:idx) cout << x <<endl;
+        for(int i=0;i<n;i++)
+        {
+            cout << i << j<<endl;
+            if(haystack[i]==needle[j]) 
+            {
+                if(++j==m) return i-m+1;
+            }
+            else
+            {
+                while(j>=1&&haystack[i]!=needle[j]) j = idx[j-1];
+                if(haystack[i]==needle[j]) ++j;
+            }
+        }
+       
+        return -1;
+    }
+};
+```
+
 
 
 ## Trie
