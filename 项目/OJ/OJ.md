@@ -66,7 +66,6 @@ compile_server:compile_server.cc
 clean:
 	rm -f compile_server
 
-
 ```
 
 
@@ -509,20 +508,6 @@ online.push_back(machines.size())
 Control类创建的时候会把conf的每个port用machines.size()递增赋予id
 
 这个id映射就是固定不变的了，不重复就行
-
-
-
-## 怎么判断机器服务端是否在线的     
-
-RecoveryMachine 所有离线添加到在线  (没调用)
-
-判题的时候尝试连接，连不上会下线
-
-所以重连是不行的，只要所有的端口都掉线了，那么重连也没用了
-
-https://blog.51cto.com/byte/7427307)
-
-
 
 
 
