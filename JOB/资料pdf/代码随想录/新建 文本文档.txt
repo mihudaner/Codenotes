@@ -1,0 +1,46 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+
+using namespace std;
+
+vector<int> findNextHigherValue(const vector<int>& heights) {
+    int n = heights.size();
+    vector<int> result(n, -1);  // 初始化结果数组，默认值为-1
+    stack<int> s;  // 用来存储索引的栈
+
+    for (int i = n - 1; i >= 0; --i) {
+        // 清理栈，确保栈顶高度大于当前高度
+        while (!s.empty() && heights[s.top()] <= heights[i]) {
+            s.pop();
+        }
+        
+        // 如果栈不为空，栈顶就是下一个比当前高度大的位置
+        if (!s.empty()) {
+            result[i] = heights[s.top()];  // 栈顶元素对应的值就是下一个更大的值
+        }
+        
+        // 将当前索引入栈
+        s.push(i);
+    }
+
+    return result;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> heights(n);
+
+    for (int i = 0; i < n; ++i) {
+        cin >> heights[i];
+    }
+
+    vector<int> result = findNextHigherValue(heights);
+
+    for (int i = 0; i < n; ++i) {
+        cout << result[i] << " ";
+    }
+
+    return 0;
+}
