@@ -248,8 +248,11 @@ for(int i=0;i<N;i++) //不报错
 
 ## iota
 
-```c++
-iota(id.begin(), id.end(), 0); // id[i] = i
+### iota下标绑定排序
+
+```c
+iota(id.begin(), id.end(), 0);
+sort(id.begin(), id.end(), [&](int i, int j)  {return indices[i] > indices[j];});
 ```
 
 配合sort函数操作
@@ -524,7 +527,7 @@ int bsearch_2(int l, int r)
 
 https://blog.csdn.net/qq_62417282/article/details/127862093
 
-![image-20240610235434318](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20240610235434318.png)
+![image-20240610235434318](img/image-20240610235434318.png)
 
 ```c
 #include<iostream>
@@ -910,7 +913,7 @@ public:
 
 ### 【[花期内花的数目](https://leetcode.cn/problems/number-of-flowers-in-full-bloom/)-好题】
 
-![image-20231024200250341](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231024200250341.png)
+![image-20231024200250341](./img/image-20231024200250341.png)
 
 [算法课堂差分数组](https://leetcode.cn/circle/discuss/FfMCgb/)
 
@@ -2014,7 +2017,7 @@ int main()
 原文链接：https://blog.csdn.net/gaoqiandr/article/details/127172792
 ```
 
-![image-20231023214417202](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231023214417202.png)
+![image-20231023214417202](./img/image-20231023214417202.png)
 
 ### 【[执行 K 次操作后的最大分数](https://leetcode.cn/problems/maximal-score-after-applying-k-operations/)】
 
@@ -2944,7 +2947,7 @@ public:
 > 输出：92
 > ```
 
-![image-20231214225409667](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231214225409667.png)
+![image-20231214225409667](./img/image-20231214225409667.png)
 
 ```c++
 class Solution {
@@ -3876,7 +3879,7 @@ public:
 >
 > 初始状态下，所有 next 指针都被设置为 `NULL` 。
 >
-> ![image-20231103231910450](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231103231910450.png)
+> ![image-20231103231910450](./img/image-20231103231910450.png)
 >
 > ```c++
 > 输入：root = [1,2,3,4,5,null,7]
@@ -4383,7 +4386,7 @@ public:
 - 能知道每一个点最短距离
 - 稠密图
 
-![image-20231115102507834](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231115102507834.png)
+![image-20231115102507834](./img/image-20231115102507834.png)
 
 ```
 for (int k = 0; k < n; ++k) {
@@ -4402,7 +4405,7 @@ for (int k = 0; k < n; ++k) {
 
 ### dijkstra
 
-![image-20231214231159938](/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231214231159938.png)
+![image-20231214231159938](./img/image-20231214231159938.png)
 
 djs是距离0点的距离最小且没确定最小值的点来更新后面的点
 
@@ -6327,7 +6330,7 @@ public:
 };
 ```
 
-<img src="/home/wangkai/codenotes_ubuntu/Leecode/img/image-20231030201618524.png" alt="image-20231030201618524" style="zoom: 50%;" />
+<img src="./img/image-20231030201618524.png" alt="image-20231030201618524" style="zoom: 50%;" />
 
 
 
