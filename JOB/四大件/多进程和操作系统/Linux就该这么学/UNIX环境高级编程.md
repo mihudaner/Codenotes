@@ -6,7 +6,7 @@ find ./ -type f -mmin -120
 
 # 一、Unix基础知识
 
-![image-20240102112628567](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240102112628567.png)
+![image-20240102112628567](./img/image-20240102112628567.png)
 
 ## ls函数实现
 
@@ -78,7 +78,7 @@ main(void)
 
 ## 标准IO  
 
-![image-20240102161503715](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240102161503715.png)
+![image-20240102161503715](./img/image-20240102161503715.png)
 
 ```c
 #include "apue.h"
@@ -165,7 +165,7 @@ execlp("echo", "echo","localhost", NULL);
 
 ## 出错处理
 
-![image-20240102190227934](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240102190227934.png)
+![image-20240102190227934](./img/image-20240102190227934.png)
 
 ```c
 #include "apue.h"
@@ -205,7 +205,7 @@ int setuid(uid_t uid)
 int setgid(gid_t gid)
 ```
 
-![image-20240110145917775](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110145917775.png)
+![image-20240110145917775](./img/image-20240110145917775.png)
 
 ## 信号
 
@@ -276,7 +276,7 @@ sys 0.00
 
 
 
-![image-20240103133758469](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240103133758469.png)
+![image-20240103133758469](./img/image-20240103133758469.png)
 
 ## [makefile](https://blog.csdn.net/qq_35484725/article/details/127034667)
 
@@ -342,11 +342,11 @@ target_link_libraries(main ${Boost_LIBRARIES})  # 必须加这个
 
 ### ISO C
 
-![image-20240103134033814](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240103134033814.png)
+![image-20240103134033814](./img/image-20240103134033814.png)
 
 ### IEEE POSIX
 
-![image-20240103134134416](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240103134134416.png)
+![image-20240103134134416](./img/image-20240103134134416.png)
 
 ## UNIX系统实现
 
@@ -366,7 +366,7 @@ target_link_libraries(main ${Boost_LIBRARIES})  # 必须加这个
 
 ## 限制
 
-![image-20240103134458678](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240103134458678.png)
+![image-20240103134458678](./img/image-20240103134458678.png)
 
 ### getconf
 
@@ -383,9 +383,9 @@ target_link_libraries(main ${Boost_LIBRARIES})  # 必须加这个
 
 提供的代码是awk解析的sys文件获得的c代码
 
-![](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240103140019019.png)
+![](./img/image-20240103140019019.png)
 
-![image-20240103141514541](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240103141514541.png)
+![image-20240103141514541](./img/image-20240103141514541.png)
 
 ```c
 pr_sysconf("SYMLOOP_MAX =", _SC_SYMLOOP_MAX);
@@ -447,13 +447,13 @@ if  返回值<0
 
 ## open
 
-![image-20240108212921302](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108212921302.png)
+![image-20240108212921302](./img/image-20240108212921302.png)
 
 mode_t是访问权限
 
 ## create
 
-![image-20240108213117066](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108213117066.png)
+![image-20240108213117066](./img/image-20240108213117066.png)
 
 ## read write lseed
 
@@ -520,11 +520,11 @@ main(void)
 
 ## 进程文件共享
 
-![image-20240107193246064](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240107193246064.png)
+![image-20240107193246064](./img/image-20240107193246064.png)
 
 ## 文件描述符标志和文件状态标志
 
-![image-20240107193928128](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240107193928128.png)
+![image-20240107193928128](./img/image-20240107193928128.png)
 
 ## 原子性操作
 
@@ -616,7 +616,7 @@ int main(int argc,char *argv[])
 
 ## ioctl
 
-![image-20240107233646157](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240107233646157.png)
+![image-20240107233646157](./img/image-20240107233646157.png)
 
 ## /dev/fd
 
@@ -638,19 +638,19 @@ struct stat            sbuf;
 if (fstat(fd, &fdstat) < 0)
 ```
 
-![image-20240107234255619](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240107234255619.png)
+![image-20240107234255619](./img/image-20240107234255619.png)
 
 ## 文件类型
 
-![image-20240108001759643](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108001759643.png)
+![image-20240108001759643](./img/image-20240108001759643.png)
 
 ## 文件权限
 
-![image-20240108002052027](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108002052027.png)
+![image-20240108002052027](./img/image-20240108002052027.png)
 
 
 
-![image-20240108002209120](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108002209120.png)
+![image-20240108002209120](./img/image-20240108002209120.png)
 
 ## access
 
@@ -747,7 +747,7 @@ main(void)
 
 ## chown
 
-![image-20240108213855341](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108213855341.png)
+![image-20240108213855341](./img/image-20240108213855341.png)
 
 修改用户和用户组
 
@@ -755,17 +755,17 @@ main(void)
 
 ## 文件长度  truncate截断
 
-![image-20240108214602747](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108214602747.png)
+![image-20240108214602747](./img/image-20240108214602747.png)
 
 
 
  truncate
 
-![image-20240108214628118](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108214628118.png)
+![image-20240108214628118](./img/image-20240108214628118.png)
 
 ## 文件系统
 
-![image-20240108215057699](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108215057699.png)
+![image-20240108215057699](./img/image-20240108215057699.png)
 
 ## [硬链接和软(符号)连接 ](https://www.jianshu.com/p/7e3af93f6cc9) ln命令
 
@@ -801,27 +801,27 @@ lrwxrwxrwx  1 wangkai wangkai     3 1月   8 22:01 foo2 -> foo
 
 ## link
 
-![image-20240108215342301](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108215342301.png)
+![image-20240108215342301](./img/image-20240108215342301.png)
 
 
 
 ## unlink
 
-![image-20240108215715914](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108215715914.png)
+![image-20240108215715914](./img/image-20240108215715914.png)
 
 ## symlink
 
-![image-20240108220241386](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108220241386.png)
+![image-20240108220241386](./img/image-20240108220241386.png)
 
 ## remove rename
 
-![image-20240108215707638](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240108215707638.png)
+![image-20240108215707638](./img/image-20240108215707638.png)
 
 ## 文件时间
 
-![image-20240109164626123](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109164626123.png)
+![image-20240109164626123](./img/image-20240109164626123.png)
 
-![image-20240109164657592](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109164657592.png)
+![image-20240109164657592](./img/image-20240109164657592.png)
 
 ```c++
 #include "apue.h"
@@ -882,7 +882,7 @@ if (chdir(STARTDIR) < 0)
 
 打开和删除目录
 
-![image-20240109172411225](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109172411225.png)
+![image-20240109172411225](./img/image-20240109172411225.png)
 
 ```c
 #include <stdio.h>
@@ -956,7 +956,7 @@ main(void)
 
 ## 流和FILE对象
 
-![image-20240109175025376](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109175025376.png)
+![image-20240109175025376](./img/image-20240109175025376.png)
 
 stdin stderr是文件指针
 
@@ -970,15 +970,15 @@ STDIN_FILENO是文件描述符
 
 ### fopen
 
-![image-20240109183624754](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109183624754.png)
+![image-20240109183624754](./img/image-20240109183624754.png)
 
 ### getc  putc
 
 
 
-![image-20240109184917027](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109184917027.png)
+![image-20240109184917027](./img/image-20240109184917027.png)
 
-![image-20240109184846784](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109184846784.png)
+![image-20240109184846784](./img/image-20240109184846784.png)
 
 [fgets( )和fputs( )(建议用其完全代替gets和puts*函数*)](https://download.csdn.net/download/qfeung/9585608?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-download-2~default~CTRLIST~Paid-1-9585608-blog-84799613.235^v40^pc_relevant_anti_t3_base&depth_1-utm_source=distribute.pc_relevant_t0.none-task-download-2~default~CTRLIST~Paid-1-9585608-blog-84799613.235^v40^pc_relevant_anti_t3_base&utm_relevant_index=1)
 
@@ -1007,11 +1007,11 @@ main(void)
 
 ### ferror
 
-![image-20240109184826896](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109184826896.png)
+![image-20240109184826896](./img/image-20240109184826896.png)
 
 ## 一次一行fgets
 
-![image-20240109185756921](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109185756921.png)
+![image-20240109185756921](./img/image-20240109185756921.png)
 
 ```c
 #include "apue.h"
@@ -1041,11 +1041,11 @@ EOP是-1
 
 ## 二进制IO
 
-![image-20240109185924640](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109185924640.png)
+![image-20240109185924640](./img/image-20240109185924640.png)
 
 ## 格式化输入
 
-![image-20240109192513046](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109192513046.png)
+![image-20240109192513046](./img/image-20240109192513046.png)
 
 
 
@@ -1095,7 +1095,7 @@ main()
 
 ## 格式化输出
 
-![image-20240109193113591](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109193113591.png)
+![image-20240109193113591](./img/image-20240109193113591.png)
 
 ```c
 
@@ -1130,7 +1130,7 @@ main(void)
 
 ## fileno
 
-![image-20240109200529078](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109200529078.png)
+![image-20240109200529078](./img/image-20240109200529078.png)
 
 ## rewind和临时文件
 
@@ -1167,7 +1167,7 @@ main(void)
 
 ## 口令文件
 
-![image-20240109203400696](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109203400696.png)
+![image-20240109203400696](./img/image-20240109203400696.png)
 
 ### finger
 
@@ -1182,7 +1182,7 @@ No Plan.
 
 ### getpwnm
 
-![image-20240109203925837](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109203925837.png)
+![image-20240109203925837](./img/image-20240109203925837.png)
 
 ```c
 #include <pwd.h>
@@ -1206,11 +1206,11 @@ getpwnam(const char *name)
 
 ## 组文件
 
-![image-20240109204209987](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109204209987.png)
+![image-20240109204209987](./img/image-20240109204209987.png)
 
 ## 其他文件
 
-![image-20240109204343166](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109204343166.png)
+![image-20240109204343166](./img/image-20240109204343166.png)
 
 ## 登录记录
 
@@ -1230,7 +1230,7 @@ cat /var/log/auth.log
 
 ## 系统标识
 
-![image-20240109205044278](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109205044278.png)
+![image-20240109205044278](./img/image-20240109205044278.png)
 
 ```
 (base) wangkai@wangkai-Legion-Y9000P-IAH7H:~/codenotes_ubuntu/Linux/Unix
@@ -1240,7 +1240,7 @@ Linux wangkai-Legion-Y9000P-IAH7H 5.15.0-88-generic #98~20.04.1-Ubuntu SMP Mon O
 
 ## 时间戳
 
-![image-20240109210329128](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109210329128.png)
+![image-20240109210329128](./img/image-20240109210329128.png)
 
 ```
   struct timespec {
@@ -1290,7 +1290,7 @@ user    0m0.001s
 
 ## 进程终止
 
-![image-20240109213838133](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109213838133.png)
+![image-20240109213838133](./img/image-20240109213838133.png)
 
 exit会有一系列处理然后返回内核
 
@@ -1333,7 +1333,7 @@ my_exit2(void)
 
 
 
-![image-20231222114924089](/home/wangkai/codenotes_ubuntu/Linux/img/image-20231222114924089.png)
+![image-20231222114924089](./img/image-20231222114924089.png)
 
 ```shell
 //短格式可以合并
@@ -1530,19 +1530,19 @@ main(int argc, char *argv[])
 
 ## c程序的存储空间分布
 
-![image-20240109231927744](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109231927744.png)
+![image-20240109231927744](./img/image-20240109231927744.png)
 
 # 
 
 ### 进程空间  堆和栈
 
-![image-20240109232114737](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109232114737.png)
+![image-20240109232114737](./img/image-20240109232114737.png)
 
 
 
 ### PCB进程控制块
 
-![image-20240109232349661](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109232349661.png)
+![image-20240109232349661](./img/image-20240109232349661.png)
 
 
 
@@ -1554,7 +1554,7 @@ Linux虚拟内存应该是用在Swap交换空间,Swap交换空间是一种虚拟
 
 
 
-![image-20240110103134040](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110103134040.png)
+![image-20240110103134040](./img/image-20240110103134040.png)
 
 
 
@@ -1568,9 +1568,9 @@ Linux虚拟内存应该是用在Swap交换空间,Swap交换空间是一种虚拟
 
 ### [==进行创建和运行时候的虚拟地址、虚拟内存、物理内存之间的关系==](https://zhuanlan.zhihu.com/p/655263291)
 
-![image-20240110103809393](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110103809393.png)
+![image-20240110103809393](./img/image-20240110103809393.png)
 
-![image-20240109234233681](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240109234233681.png)
+![image-20240109234233681](./img/image-20240109234233681.png)
 
 ### IO的用户空间和内核空间切换
 
@@ -1625,7 +1625,7 @@ sys     0m0.428s
 
 类似memset的函数吧,在堆区动态分配内存
 
-![image-20240110105403491](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110105403491.png)
+![image-20240110105403491](./img/image-20240110105403491.png)
 
 
 
@@ -1654,7 +1654,7 @@ bash: /opt/ros/noetic/lib:/usr/local/cuda11.1/lib64:/usr/local/cuda11.1/lib64:/u
 char *getenv(const char *name);
 ```
 
-![image-20240110110626536](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110110626536.png)
+![image-20240110110626536](./img/image-20240110110626536.png)
 
 ## 跳转函数
 
@@ -1854,7 +1854,7 @@ pr_limits(char *name, int resource)
 
 ## 进程标识 getpid
 
-![image-20240110125416286](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110125416286.png)
+![image-20240110125416286](./img/image-20240110125416286.png)
 
 ## fork
 
@@ -1950,7 +1950,7 @@ main(void)
 
 但结果父进程是std输出，子进程被重定向了
 
-![image-20240110140258940](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110140258940.png)
+![image-20240110140258940](./img/image-20240110140258940.png)
 
 ==所以打开的文件和偏移是共享的因为指向的同一个文件表==
 
@@ -1999,7 +1999,7 @@ vfork共享数据段并且父进程会阻塞
 
 ## waitpid 和子进程exit退出状态
 
-![image-20240110140739648](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110140739648.png)
+![image-20240110140739648](./img/image-20240110140739648.png)
 
 
 
@@ -2048,11 +2048,11 @@ printf("%d",(status >> 8) & 0xFF);
 
 ### 进程退出码 异常是低七位 正常是高8位
 
-### ![image-20240110141056448](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110141056448.png)
+### ![image-20240110141056448](./img/image-20240110141056448.png)
 
 ### 非阻塞
 
-![image-20240110141110740](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110141110740.png)
+![image-20240110141110740](./img/image-20240110141110740.png)
 
 ```
 wpid = waitpid(-1,&status,WNOHANG);
@@ -2097,7 +2097,7 @@ TELL_CHILD;
 
 ## exec簇函数
 
-![image-20240110144413081](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110144413081.png)
+![image-20240110144413081](./img/image-20240110144413081.png)
 
 ## execl解释器文件
 
@@ -2124,7 +2124,7 @@ main(void)
 
 ```
 
-![image-20240110145036037](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110145036037.png)
+![image-20240110145036037](./img/image-20240110145036037.png)
 
 ## exec定义的system函数
 
@@ -2165,7 +2165,7 @@ system(const char *cmdstring)	/* version without signal handling */
 
 ## 进程调度和进程优先级
 
-![image-20240110151945985](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110151945985.png)
+![image-20240110151945985](./img/image-20240110151945985.png)
 
 ```c
 #include "apue.h"
@@ -2319,7 +2319,7 @@ times返回值是墙上时钟   较大的时间
 
 同一进程组接受终端的各种信号
 
-![image-20240110160910983](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110160910983.png)
+![image-20240110160910983](./img/image-20240110160910983.png)
 
 ## 会话
 
@@ -2327,13 +2327,13 @@ pid_t setsid(void);
 
 pid_t getsid(void);
 
-![image-20240110164639480](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110164639480.png)
+![image-20240110164639480](./img/image-20240110164639480.png)
 
 
 
 ## 控制终端
 
-![image-20240110164750712](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110164750712.png)
+![image-20240110164750712](./img/image-20240110164750712.png)
 
 
 
@@ -2370,7 +2370,7 @@ pid_t getsid(void);
 
 ### 孤儿进程
 
-![image-20240110175309299](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110175309299.png)
+![image-20240110175309299](./img/image-20240110175309299.png)
 
 ```c
 #include "apue.h"
@@ -2429,9 +2429,9 @@ SIGHUP父进程g了会给暂停的子进程发送挂断
 
 
 
-![image-20240110175109808](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110175109808.png) 
+![image-20240110175109808](./img/image-20240110175109808.png) 
 
-![image-20240110175511536](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110175511536.png)
+![image-20240110175511536](./img/image-20240110175511536.png)
 
 
 
@@ -2447,13 +2447,13 @@ SIGHUP父进程g了会给暂停的子进程发送挂断
 
 
 
-![image-20240112145937405](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112145937405.png)
+![image-20240112145937405](./img/image-20240112145937405.png)
 
-![image-20240112150008772](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112150008772.png)
+![image-20240112150008772](./img/image-20240112150008772.png)
 
 
 
-![image-20240112151728613](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112151728613.png)
+![image-20240112151728613](./img/image-20240112151728613.png)
 
 
 
@@ -2526,7 +2526,7 @@ https://www.cnblogs.com/fortunely/p/14850804.html
 
 ## 可重入函数
 
-![image-20240112160435812](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112160435812.png)
+![image-20240112160435812](./img/image-20240112160435812.png)
 
 回调函数应该是可重入的不然会意想不到的错误，比如malloc free重复调用带来的错误
 
@@ -2536,7 +2536,7 @@ https://www.cnblogs.com/fortunely/p/14850804.html
 
 ## 未决信号 和 阻塞信号集
 
-![image-20240112161825748](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112161825748.png)
+![image-20240112161825748](./img/image-20240112161825748.png)
 
 > 下面以SIGINT为例说明信号未决信号集和阻塞信号集的关系：
 >
@@ -2557,19 +2557,19 @@ https://www.cnblogs.com/fortunely/p/14850804.html
 
 https://www.cnblogs.com/codingbigdog/p/16246557.html
 
-![image-20240112162141419](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112162141419.png)
+![image-20240112162141419](./img/image-20240112162141419.png)
 
 
 
 ## Kill和raise
 
-![image-20240112164328408](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112164328408.png)
+![image-20240112164328408](./img/image-20240112164328408.png)
 
 
 
 ## alarm和pause
 
-![image-20240112164656968](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112164656968.png)
+![image-20240112164656968](./img/image-20240112164656968.png)
 
 ```c
 #include	<signal.h>
@@ -2597,7 +2597,7 @@ sleep1(unsigned int seconds)
 
 ### 信号集操作
 
-![image-20240112171334634](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112171334634.png)
+![image-20240112171334634](./img/image-20240112171334634.png)
 
 ```c
 #include	<signal.h>
@@ -2647,7 +2647,7 @@ sigismember(const sigset_t *set, int signo)
 
 设置和获得信号集MASK
 
-![image-20240112165644226](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112165644226.png)
+![image-20240112165644226](./img/image-20240112165644226.png)
 
 ```c
 #include "apue.h"
@@ -2693,17 +2693,17 @@ sigpending是获得未决信号集   sigprocmask是获得阻塞信号集mask
 
 signal函数是基于sigaction实现的
 
-![image-20240115095439604](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240115095439604.png)
+![image-20240115095439604](./img/image-20240115095439604.png)
 
 ### sigsetjmp
 
-![image-20240115100059961](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240115100059961.png)
+![image-20240115100059961](./img/image-20240115100059961.png)
 
 ### sigsuspend
 
 原子操作释放阻塞信号然后pause
 
-![image-20240112171830093](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240112171830093.png)
+![image-20240112171830093](./img/image-20240112171830093.png)
 
 ```c
 #include "apue.h"
@@ -2777,7 +2777,7 @@ system会新起一个子进程来调用要执行的命令。而exec簇只是用�
 
 ## 线程创建
 
-![image-20240118215231121](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240118215231121.png)
+![image-20240118215231121](./img/image-20240118215231121.png)
 
 > 4、输入参数：（以下做简介，具体参见实例一目了然）
 >
@@ -2885,7 +2885,7 @@ main(void)
 
 ## 线程互斥量自定义的函数
 
-![image-20240118225006280](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240118225006280.png)
+![image-20240118225006280](./img/image-20240118225006280.png)
 
 ```c
 #include <stdlib.h>
@@ -2942,11 +2942,11 @@ foo_alloc这个函数失败则返回NULL
 
 ## 避免死锁try_lock
 
-![image-20240118225542893](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240118225542893.png)
+![image-20240118225542893](./img/image-20240118225542893.png)
 
 ## timedlock
 
-![image-20240118225646572](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240118225646572.png)
+![image-20240118225646572](./img/image-20240118225646572.png)
 
 
 
@@ -2954,13 +2954,13 @@ foo_alloc这个函数失败则返回NULL
 
 ### 读写锁
 
-![image-20240119112319566](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119112319566.png)
+![image-20240119112319566](./img/image-20240119112319566.png)
 
 
 
 ### 带超时读写锁
 
-![image-20240119112348566](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119112348566.png)
+![image-20240119112348566](./img/image-20240119112348566.png)
 
 
 
@@ -2974,7 +2974,7 @@ foo_alloc这个函数失败则返回NULL
 
 搭配互斥量使用的
 
-![image-20240119122652869](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119122652869.png)
+![image-20240119122652869](./img/image-20240119122652869.png)
 
 ```c
 #include <pthread.h>
@@ -3020,7 +3020,7 @@ enqueue_msg(struct msg *mp)
 
 ### Barrier
 
-![image-20240119122853008](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119122853008.png)
+![image-20240119122853008](./img/image-20240119122853008.png)
 
 ### 自旋锁 ×
 
@@ -3038,7 +3038,7 @@ enqueue_msg(struct msg *mp)
 
 ## 线程属性
 
-![image-20240119125755766](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119125755766.png)
+![image-20240119125755766](./img/image-20240119125755766.png)
 
 
 
@@ -3067,7 +3067,7 @@ makethread(void *(*fn)(void *), void *arg)
 
 ## 互斥量属性
 
-![image-20240119125929965](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119125929965.png)
+![image-20240119125929965](./img/image-20240119125929965.png)
 
 ## 其他互斥量属性×
 
@@ -3075,7 +3075,7 @@ makethread(void *(*fn)(void *), void *arg)
 
 ## 重入
 
-![image-20240119130503992](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119130503992.png)
+![image-20240119130503992](./img/image-20240119130503992.png)
 
 
 
@@ -3186,11 +3186,11 @@ main(void)
    - 为了避免这个问题，通常在 `fork` 之后，子进程应该谨慎地使用同步机制。一种解决方案是在 `fork` 之后立即解锁父进程中的锁。
    - 对于互斥量，可以在 `fork` 之后使用 `pthread_mutex_unlock` 来解锁。
 
-![image-20240119134517093](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119134517093.png)
+![image-20240119134517093](./img/image-20240119134517093.png)
 
 ## 线程和IO
 
-![image-20240119134705101](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119134705101.png)
+![image-20240119134705101](./img/image-20240119134705101.png)
 
 
 
@@ -3208,7 +3208,7 @@ main(void)
 
 这里的daemon进程是指 后台运行==没有连接用户登录时所用的终端==
 
-![image-20240110150151871](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240110150151871.png)
+![image-20240110150151871](./img/image-20240110150151871.png)
 
 ```
 ps -efj     
@@ -3297,7 +3297,7 @@ main(void)
 
 貌似是一个单个文件划分文件区的锁
 
-![image-20240119144033949](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240119144033949.png)
+![image-20240119144033949](./img/image-20240119144033949.png)
 
 ## select
 
@@ -3529,7 +3529,7 @@ int main()
 
 ## poll
 
-![image-20240124210507650](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240124210507650.png)
+![image-20240124210507650](./img/image-20240124210507650.png)
 
 ```c
 #include <poll.h>
@@ -3886,7 +3886,7 @@ int main()
 
 ## [这三个的区别](https://blog.csdn.net/weixin_43376501/article/details/108664706)
 
-![image-20240124211924203](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240124211924203.png)
+![image-20240124211924203](./img/image-20240124211924203.png)
 
 
 
@@ -3910,7 +3910,7 @@ int main()
 
 ## 管道
 
-![image-20240124220623058](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240124220623058.png)
+![image-20240124220623058](./img/image-20240124220623058.png)
 
 管道是半双工工作的，也就是可以A进程读B进程写，也可以B进程读A进程写，但是A、B两个进程不能同时读写。
 
@@ -3946,7 +3946,7 @@ main(void)
 
 
 
-![image-20240125120146792](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240125120146792.png)
+![image-20240125120146792](./img/image-20240125120146792.png)
 
 通过管道直接输出到分页程序
 
@@ -4073,7 +4073,7 @@ WAIT_CHILD(void)
 
 ## popen pcllose
 
-![image-20240125131533920](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240125131533920.png)
+![image-20240125131533920](./img/image-20240125131533920.png)
 
 ### fflush
 
@@ -4244,9 +4244,9 @@ sig_pipe(int signo)
 
 ```
 
-![image-20240127105459603](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127105459603.png)
+![image-20240127105459603](./img/image-20240127105459603.png)
 
-![image-20240127105948897](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127105948897.png)
+![image-20240127105948897](./img/image-20240127105948897.png)
 
 popen是在子进程读取标准输入，而协同进程时在主进程获得标准输入
 
@@ -4271,11 +4271,11 @@ popen是在子进程读取标准输入，而协同进程时在主进程获得标
 
 ### 带缓冲标准IO造成的死锁
 
-![image-20240127110543801](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127110543801.png)
+![image-20240127110543801](./img/image-20240127110543801.png)
 
 子进程的read换成fgets，主进程和子进程使用一个文件描述符缓冲，发生问题
 
-![image-20240127113326067](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127113326067.png)
+![image-20240127113326067](./img/image-20240127113326067.png)
 
 ## FIFO
 
@@ -4283,7 +4283,7 @@ popen是在子进程读取标准输入，而协同进程时在主进程获得标
 
 FIFO在不相干的两个进程也可以交换数据
 
-![image-20240127184229527](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127184229527.png)
+![image-20240127184229527](./img/image-20240127184229527.png)
 
 ```c
 #include "apue.h"
@@ -4314,7 +4314,7 @@ main(void)
 
 ### 用FIFO复制输出流
 
-![image-20240127184541132](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127184541132.png)
+![image-20240127184541132](./img/image-20240127184541132.png)
 
 ### FIFO进行客户和服务进程通信
 
@@ -4334,7 +4334,7 @@ main(void)
 
 消息的链表，标识符简称队列ID
 
-![image-20240127231250139](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127231250139.png)
+![image-20240127231250139](./img/image-20240127231250139.png)
 
 msgid就是队列id
 
@@ -4408,11 +4408,11 @@ int main()
 
 ### msqid_ds
 
-![image-20240127231807973](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127231807973.png)
+![image-20240127231807973](./img/image-20240127231807973.png)
 
 ### msgctl
 
-![image-20240127232036447](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240127232036447.png)
+![image-20240127232036447](./img/image-20240127232036447.png)
 
 ```c
 // 设置消息队列属性
@@ -4520,7 +4520,7 @@ semop(semid, &sem_op, 1);
 
 ## 共享存储 
 
-![image-20240128130703904](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240128130703904.png)
+![image-20240128130703904](./img/image-20240128130703904.png)
 
 ### 书上例子 
 
@@ -4685,7 +4685,7 @@ int main() {
 
 [想存动态大小的东西还是很复杂的](https://blog.csdn.net/weixin_30952103/article/details/95481296?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-4-95481296-blog-116657175.235^v43^pc_blog_bottom_relevance_base1&spm=1001.2101.3001.4242.3&utm_relevant_index=7)
 
-![image-20240128224417923](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240128224417923.png)
+![image-20240128224417923](./img/image-20240128224417923.png)
 
 > ==shmat会返回开辟的共享内存地址==
 >
@@ -4759,7 +4759,7 @@ IPC允许同一台计算机的进程通信，而 套接字是不同计算机
 
 ## 套接字描述符
 
-![image-20240129003508736](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240129003508736.png)
+![image-20240129003508736](./img/image-20240129003508736.png)
 
 ## 寻址
 
@@ -4783,7 +4783,7 @@ tcp ip是大段字节序
 
 ### 地址格式sockaddr
 
-![image-20240201233252589](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240201233252589.png)
+![image-20240201233252589](./img/image-20240201233252589.png)
 
 ```c
 struct sockaddr_in {
@@ -4824,7 +4824,7 @@ bind(listen_fd, (struct sockaddr *)&servaddr, sizeof(servaddr));		/* initialize 
 
 **输出**
 
-![image-20240201233724277](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240201233724277.png)
+![image-20240201233724277](./img/image-20240201233724277.png)
 
 
 
@@ -4844,7 +4844,7 @@ bind(listen_fd, (struct sockaddr *)&servaddr, sizeof(servaddr));		/* initialize 
 
 ## socket创建流程图
 
-![image-20240201233823575](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240201233823575.png)
+![image-20240201233823575](./img/image-20240201233823575.png)
 
 
 
@@ -4900,4 +4900,4 @@ socket()打开一个网络通讯端口，如果成功的话，就像open()一样
 
 ### 套接字选项
 
-![image-20240201234129280](/home/wangkai/codenotes_ubuntu/Linux/img/image-20240201234129280.png)
+![image-20240201234129280](./img/image-20240201234129280.png)
