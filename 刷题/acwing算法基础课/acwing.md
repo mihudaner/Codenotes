@@ -4773,6 +4773,13 @@ int main()
 
 ### 【卡特兰数-满足条件的01序列】
 
+> ### 卡特兰数
+>
+> [折线法](https://www.bilibili.com/video/BV1UE411G7pR/?spm_id_from=333.788.recommend_more_video.-1&vd_source=eef102f4fb053709a57c96d0c876628a)
+>
+> - `f(n) = C(2n,n) / (n+1)`
+> - [计算用途](https://blog.csdn.net/baidu_39514357/article/details/128378536)：二叉树形态数，出栈序列数
+
 比深搜简单
 
 ![image-20231010202620583](./img/image-20231010202620583.png)
