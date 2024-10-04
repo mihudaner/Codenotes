@@ -1563,89 +1563,124 @@ int main()
 
 ```
 
-二刷，不加第一个哨兵使得i从1开始
+> 二刷，不加第一个哨兵使得i从1开始
+>
+> ==idx必须表示是包括第i个字符的公共前后缀长度==
+>
+> j表示已经匹配的位置
+>
+> ```c
+> class Solution {
+> public:
+>     int strStr(string haystack, string needle) {
+>         int n = haystack.size(), m = needle.size();
+>         vector<int> idx(m,-1);//存的是包括第i个字符的公共前后缀长度
+>         idx[0] = -1;
+>         int j =-1;
+>         for(int i=1;i<m;i++)
+>         {
+>             while(j!=-1&&needle[i]!=needle[j+1])
+>             {
+>                 j = idx[j];
+>             }
+>             if(needle[i]==needle[j+1]) j++;
+>             idx[i]=j;
+>         }
+>         j=-1;
+>         for(auto x:idx) cout <<x<<endl;
+>         for(int i=0;i<n;i++)
+>         {
+>             if(haystack[i]==needle[j+1]) 
+>             {
+>                 if(++j==m-1) return i-m+1;
+>             }
+>             else
+>             {
+>                 while(j!=-1&&haystack[i]!=needle[j+1]) j = idx[j];
+>                 if(haystack[i]==needle[j+1]) j++;
+>             }
+>         }
+>        
+>         return -1;
+>     }
+> };
+> ```
+>
+> j表示待匹配的位置
+>
+> ```c
+> class Solution {
+> public:
+>     int strStr(string haystack, string needle) {
+>         int n = haystack.size(), m = needle.size();
+>         vector<int> idx(m,0);//存的是包括第i个字符的公共前后缀长度
+>         idx[0] = 0;
+>         int j =0;
+>         for(int i=1;i<m;i++)
+>         {
+>            
+>             while(j>=1&&needle[i]!=needle[j])
+>             {
+>                 j = idx[j-1];
+>             }
+>             if(needle[i]==needle[j]) idx[i] = ++j;
+>             else  idx[i] = j;
+>             
+>         }
+>         j=0;
+>         for(auto x:idx) cout << x <<endl;
+>         for(int i=0;i<n;i++)
+>         {
+>             cout << i << j<<endl;
+>             if(haystack[i]==needle[j]) 
+>             {
+>                 if(++j==m) return i-m+1;
+>             }
+>             else
+>             {
+>                 while(j>=1&&haystack[i]!=needle[j]) j = idx[j-1];
+>                 if(haystack[i]==needle[j]) ++j;
+>             }
+>         }
+>        
+>         return -1;
+>     }
+> };
+> ```
+>
 
-==idx必须表示是包括第i个字符的公共前后缀长度==
-
-j表示已经匹配的位置
+[找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/)
 
 ```c
 class Solution {
 public:
-    int strStr(string haystack, string needle) {
-        int n = haystack.size(), m = needle.size();
-        vector<int> idx(m,-1);//存的是包括第i个字符的公共前后缀长度
-        idx[0] = -1;
-        int j =-1;
-        for(int i=1;i<m;i++)
-        {
-            while(j!=-1&&needle[i]!=needle[j+1])
-            {
-                j = idx[j];
-            }
-            if(needle[i]==needle[j+1]) j++;
-            idx[i]=j;
+    int strStr(string s, string p) {
+        int n = s.size(), m = p.size();
+        if(m == 0) return 0;
+        //设置哨兵
+        s.insert(s.begin(),' ');
+        p.insert(p.begin(),' ');
+        vector<int> next(m + 1);
+        //预处理next数组
+        for(int i = 2, j = 0; i <= m; i++){
+            while(j and p[i] != p[j + 1]) j = next[j];
+            if(p[i] == p[j + 1]) j++;
+            next[i] = j;
         }
-        j=-1;
-        for(auto x:idx) cout <<x<<endl;
-        for(int i=0;i<n;i++)
-        {
-            if(haystack[i]==needle[j+1]) 
-            {
-                if(++j==m-1) return i-m+1;
-            }
-            else
-            {
-                while(j!=-1&&haystack[i]!=needle[j+1]) j = idx[j];
-                if(haystack[i]==needle[j+1]) j++;
-            }
+        //匹配过程
+        for(int i = 1, j = 0; i <= n; i++){
+            while(j and s[i] != p[j + 1]) j = next[j];
+            if(s[i] == p[j + 1]) j++;
+            if(j == m) return i - m;
         }
-       
         return -1;
     }
 };
-```
 
-j表示待匹配的位置
-
-```c
-class Solution {
-public:
-    int strStr(string haystack, string needle) {
-        int n = haystack.size(), m = needle.size();
-        vector<int> idx(m,0);//存的是包括第i个字符的公共前后缀长度
-        idx[0] = 0;
-        int j =0;
-        for(int i=1;i<m;i++)
-        {
-           
-            while(j>=1&&needle[i]!=needle[j])
-            {
-                j = idx[j-1];
-            }
-            if(needle[i]==needle[j]) idx[i] = ++j;
-            else  idx[i] = j;
-            
-        }
-        j=0;
-        for(auto x:idx) cout << x <<endl;
-        for(int i=0;i<n;i++)
-        {
-            cout << i << j<<endl;
-            if(haystack[i]==needle[j]) 
-            {
-                if(++j==m) return i-m+1;
-            }
-            else
-            {
-                while(j>=1&&haystack[i]!=needle[j]) j = idx[j-1];
-                if(haystack[i]==needle[j]) ++j;
-            }
-        }
-       
-        return -1;
-    }
-};
+作者：宫水三叶
+链接：https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/solutions/575568/shua-chuan-lc-shuang-bai-po-su-jie-fa-km-tb86/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 

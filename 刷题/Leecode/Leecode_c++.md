@@ -7840,4 +7840,4 @@ public:
 >
 > 把问题改成：子数组的最大值至少出现 kk*k* 次，要怎么做？
 >
-> 用**单调栈**做，思路可以参考 [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums/)
+> 用**单调栈**做，思路可以参考 [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums/)(char*)
