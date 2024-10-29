@@ -206,7 +206,7 @@ QT主界面进程的代码都在这部分
 
 ​	由于控制参数控件太多，所以单独弄了一个可以滑动的控件，这个直接写的py文件没有ui文件
 
-![image-20240516170926307](E:\codenotes\项目\THU\img\image-20240516170926307.png)
+![image-20240516170926307](.\img\image-20240516170926307.png)
 
 * parabox.py												
 
@@ -218,7 +218,7 @@ QT主界面进程的代码都在这部分
 
   QTdesigner文件，为结构光相机的n个参数控制Box
 
-![image-20240516170753426](E:\codenotes\项目\THU\img\image-20240516170753426.png)
+![image-20240516170753426](.\img\image-20240516170753426.png)
 
 
 
@@ -228,7 +228,7 @@ QT主界面进程的代码都在这部分
 
   QT原控件不支持浮点数的spinbox和slider的组合
 
-  ![image-20240516171121126](E:\codenotes\项目\THU\img\image-20240516171121126.png)
+  ![image-20240516171121126](.\img\image-20240516171121126.png)
 
 
 
@@ -278,7 +278,7 @@ from mayavi.core.ui.api import MayaviScene, MlabSceneModel, \
                                                                        )
 ```
 
-![image-20240516171337919](E:\codenotes\项目\THU\img\image-20240516171337919.png)
+![image-20240516171337919](.\img\image-20240516171337919.png)
 
 * ZividParabox.py
 
@@ -292,7 +292,7 @@ from mayavi.core.ui.api import MayaviScene, MlabSceneModel, \
 
 后续有条件应该优化一下其中使用的深度学习模型 导出为onnx格式，这样可以去除一大部分yolo等部分代码，并且加速
 
-<img src="E:\codenotes\项目\THU\img\image-20240516165654619.png" alt="image-20240516165654619" style="zoom:50%;" />
+<img src=".\img\image-20240516165654619.png" alt="image-20240516165654619" style="zoom:50%;" />
 
 #### 主题界面（themes）
 
@@ -332,7 +332,7 @@ QT主界面进程代码和启动入口，还包括启动其中的子线程，包
 
 #### main.ui
 
-![image-20240516164740587](E:\codenotes\项目\THU\img\image-20240516164740587.png)
+![image-20240516164740587](.\img\image-20240516164740587.png)
 
 > 可用python版本的 QTdesign打开和编辑
 >
@@ -407,13 +407,13 @@ hik_img, zivid_rgb, pts = get_datas(hik_imgs[i], zivid_rgbs[i], zivid_points[i],
 zivid_rgb_corners = detect_corner(zivid_rgb)
 ```
 
-![image-20240516190817675](E:\codenotes\项目\THU\img\image-20240516190817675.png)
+![image-20240516190817675](.\img\image-20240516190817675.png)
 
 获得像素对应点云的xyz
 
 
 
-![image-20240516195748614](E:\codenotes\项目\THU\img\image-20240516195748614.png)
+![image-20240516195748614](.\img\image-20240516195748614.png)
 
 
 
@@ -425,7 +425,7 @@ hik_img_corners = detect_corner(hik_img)
 
 
 
-<img src="E:\codenotes\项目\THU\img\image-20240516190942432.png" alt="image-20240516190942432" style="zoom:50%;" />
+<img src=".\img\image-20240516190942432.png" alt="image-20240516190942432" style="zoom:50%;" />
 
 然后是用类似激光雷达和相机标定的方法获得 转换矩阵
 
@@ -464,7 +464,7 @@ load_dist_coeffs: [[-1.24773595e-01]
 projected_points, _ = cv2.projectPoints(cloud_point.reshape(1, -1, 3), rvec, tvec, camera_matrix, dist_coeffs)
 ```
 
-<img src="E:\codenotes\项目\THU\img\image-20240516195527165.png" alt="image-20240516195527165" style="zoom:50%;" />
+<img src=".\img\image-20240516195527165.png" alt="image-20240516195527165" style="zoom:50%;" />
 
 红色为ZIVID相机图像检测到的标定板像素对应点云投影到HIK相机的位置
 
@@ -474,7 +474,7 @@ projected_points, _ = cv2.projectPoints(cloud_point.reshape(1, -1, 3), rvec, tve
 
 更换为DAM8888但是还为添加到大框架里
 
-![image-20240516203828601](E:\codenotes\项目\THU\img\image-20240516203828601.png)
+![image-20240516203828601](.\img\image-20240516203828601.png)
 
 其中会开启两个线程
 
@@ -528,7 +528,7 @@ stateChanged
 
 #### 数据库驱动（db  ）
 
-### ![image-20240516165801192](E:\codenotes\项目\THU\img\image-20240516165801192.png)
+### ![image-20240516165801192](.\img\image-20240516165801192.png)
 
 | 子目录         | 说明             |
 | -------------- | ---------------- |
@@ -858,7 +858,7 @@ SAM分割进程-->>主界面进程:分割结果
 
 #### YOLO
 
-<img src="E:\codenotes\项目\THU\img\image-20240517104105636.png" alt="image-20240517104105636" style="zoom:50%;" />
+<img src=".\img\image-20240517104105636.png" alt="image-20240517104105636" style="zoom:50%;" />
 
 #### SAM
 
@@ -885,19 +885,19 @@ direction LR
 
 **局部mask**
 
-<img src="E:\codenotes\项目\THU\img\image-20240517103713906.png" alt="image-20240517103713906" style="zoom:50%;" />
+<img src=".\img\image-20240517103713906.png" alt="image-20240517103713906" style="zoom:50%;" />
 
 **去除背景**
 
-<img src="E:\codenotes\项目\THU\img\image-20240517104215609.png" alt="image-20240517104215609" style="zoom:50%;" />
+<img src=".\img\image-20240517104215609.png" alt="image-20240517104215609" style="zoom:50%;" />
 
 **获得轮廓**
 
-<img src="E:\codenotes\项目\THU\img\image-20240517104351302.png" alt="image-20240517104351302" style="zoom: 67%;" />
+<img src=".\img\image-20240517104351302.png" alt="image-20240517104351302" style="zoom: 67%;" />
 
 **模拟椭圆**
 
-<img src="E:\codenotes\项目\THU\img\image-20240517104431307.png" alt="image-20240517104431307" style="zoom:50%;" />
+<img src=".\img\image-20240517104431307.png" alt="image-20240517104431307" style="zoom:50%;" />
 
 ```mermaid
 
@@ -932,19 +932,19 @@ direction LR
 
 （1）提取孔洞附近点云，旋转矫正。已知孔洞检测框信息，由此可截取点云。如图1中黄色为工件点云数据，绿色点云为截取的孔洞附近点云。
 
-![img](E:\codenotes\项目\THU\img\clip_image002.gif)
+![img](.\img\clip_image002.gif)
 
 ​																						图1 工件点云数据可视化
 
 （2）最小二乘法拟合孔洞平面。
 
-最小二乘法原理为通过找到一个平面（![img](E:\codenotes\项目\THU\img\clip_image004.gif)），使这平面到各个点的“距离”最近，即满足公式（1)。
+最小二乘法原理为通过找到一个平面（![img](.\img\clip_image004.gif)），使这平面到各个点的“距离”最近，即满足公式（1)。
 $$
 min⁡ S=∑〖(ax_i+by_i+c-z_i )^2 〗
 $$
 
 
-通过求解超定方程求解![img](E:\codenotes\项目\THU\img\clip_image008.gif)：
+通过求解超定方程求解![img](.\img\clip_image008.gif)：
 $$
 S=J(θ)=|(|Xθ-Y|)|^2=(Xθ-Y)^T (Xθ-Y)
 $$
@@ -959,9 +959,9 @@ $$
 
 
 
-其中点云数据的x、y坐标构成矩阵X，z坐标构成矩阵Y，如公式（5）、（6），![img](E:\codenotes\项目\THU\img\clip_image008.gif)为求解的平面参数a、b、c。
+其中点云数据的x、y坐标构成矩阵X，z坐标构成矩阵Y，如公式（5）、（6），![img](.\img\clip_image008.gif)为求解的平面参数a、b、c。
 
-<img src="E:\codenotes\项目\THU\img\image-20240524100420476.png" alt="image-20240524100420476" style="zoom:50%;" />
+<img src=".\img\image-20240524100420476.png" alt="image-20240524100420476" style="zoom:50%;" />
 $$
 Xθ=Y
 $$
@@ -969,9 +969,9 @@ $$
 
 如图x为拟合的孔洞平面，红色为工件点云数据，蓝色网格为拟合的孔洞平面，绿色五角为孔洞深度最低的点。
 
-| ![img](E:\codenotes\项目\THU\img\clip_image020.gif) | ![img](E:\codenotes\项目\THU\img\clip_image022.gif) | ![img](E:\codenotes\项目\THU\img\clip_image024.gif) |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-|                                                     |                                                     |                                                     |
+| ![img](.\img\clip_image020.gif) | ![img](.\img\clip_image022.gif) | ![img](.\img\clip_image024.gif) |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+|                                 |                                 |                                 |
 
 ​																						图2 拟合孔洞平面
 
@@ -985,13 +985,13 @@ $$
 
 中心点
 
-已知![img](E:\codenotes\项目\THU\img\clip_image026.gif)、![img](E:\codenotes\项目\THU\img\clip_image028.gif)两点为孔洞框内四边形的两个顶点，则中心点![img](E:\codenotes\项目\THU\img\clip_image030.gif)如式（7），如图3（a）和（b）中所示。
+已知![img](.\img\clip_image026.gif)、![img](.\img\clip_image028.gif)两点为孔洞框内四边形的两个顶点，则中心点![img](.\img\clip_image030.gif)如式（7），如图3（a）和（b）中所示。
 $$
 (x_0,y_0,z_0 )=((x_1+x_2)/2,(y_1+y_2)/2,(z_1+z_2)/2)
 $$
 “中间”平面
 
-已知![img](E:\codenotes\项目\THU\img\clip_image034.gif)为“中间”平面法向量，设![img](E:\codenotes\项目\THU\img\clip_image036.gif)为平面上任意一点。则通过式（8）可以求得平面方程为式（9），如图3（c）所示的黄色网格即为“中间”平面，蓝色网格为拟合的孔洞平面。
+已知![img](.\img\clip_image034.gif)为“中间”平面法向量，设![img](.\img\clip_image036.gif)为平面上任意一点。则通过式（8）可以求得平面方程为式（9），如图3（c）所示的黄色网格即为“中间”平面，蓝色网格为拟合的孔洞平面。
 
 
 $$
@@ -1004,11 +1004,11 @@ $$
 
 
 
-| ![img](E:\codenotes\项目\THU\img\clip_image042.jpg) | ![img](E:\codenotes\项目\THU\img\clip_image044.jpg) |
-| --------------------------------------------------- | --------------------------------------------------- |
-| （a）                                               | （b）                                               |
-| ![img](E:\codenotes\项目\THU\img\clip_image046.jpg) | ![img](E:\codenotes\项目\THU\img\clip_image048.jpg) |
-| （c）                                               | （d）                                               |
+| ![img](.\img\clip_image042.jpg) | ![img](.\img\clip_image044.jpg) |
+| ------------------------------- | ------------------------------- |
+| （a）                           | （b）                           |
+| ![img](.\img\clip_image046.jpg) | ![img](.\img\clip_image048.jpg) |
+| （c）                           | （d）                           |
 
 ​																							图3“中间”平面
 
@@ -1016,7 +1016,7 @@ $$
 
 **3 ** **计算孔洞最低点到平面距离**
 
-由于步骤（1）旋转矫正了点云数据，因而孔洞最低点即为z值最大的点，如图3（d）孔洞深度为最低点![img](E:\codenotes\项目\THU\img\clip_image002-171651609459632.gif)到“中间”平面的距离![img](E:\codenotes\项目\THU\img\clip_image002-171651610527434.gif)。其计算公式如下：
+由于步骤（1）旋转矫正了点云数据，因而孔洞最低点即为z值最大的点，如图3（d）孔洞深度为最低点![img](.\img\clip_image002-171651609459632.gif)到“中间”平面的距离![img](.\img\clip_image002-171651610527434.gif)。其计算公式如下：
 
 
 $$
