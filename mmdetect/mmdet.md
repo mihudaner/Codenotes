@@ -203,3 +203,39 @@ python tools/analysis_tools/analyze_logs.py plot_curve /mnt/data01/WK/mmdetectio
         by_epoch=True,
         convert_to_iter_based=True),
 ```
+
+# [数据集预处理](https://blog.csdn.net/weixin_44751294/article/details/127344038)
+
+```
+kitti
+├── ImageSets
+│   ├── test.txt
+│   ├── train.txt
+│   ├── trainval.txt
+│   ├── val.txt
+├── testing
+│   ├── calib
+│   ├── image_2
+│   ├── velodyne
+│   ├── velodyne_reduced
+├── training
+│   ├── calib
+│   ├── image_2
+│   ├── label_2
+│   ├── velodyne
+│   ├── velodyne_reduced
+│   ├── planes (optional)
+├── kitti_gt_database
+│   ├── xxxxx.bin
+├── kitti_infos_train.pkl
+├── kitti_infos_val.pkl
+├── kitti_dbinfos_train.pkl
+├── kitti_infos_test.pkl
+├── kitti_infos_trainval.pkl
+├── kitti_infos_train_mono3d.coco.json
+├── kitti_infos_trainval_mono3d.coco.json
+├── kitti_infos_test_mono3d.coco.json
+├── kitti_infos_val_mono3d.coco.json
+
+```
+

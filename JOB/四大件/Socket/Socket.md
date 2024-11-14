@@ -251,9 +251,9 @@ www.jb51.net/tools/regexsc.htm
 
 # webserver
 
-![image-20231017173438960](/home/wangkai/codenotes_ubuntu/Socket/img/image-20231017173438960.png)
+![image-20231017173438960](./img/image-20231017173438960.png)
 
-![image-20231017173458060](/home/wangkai/codenotes_ubuntu/Socket/img/image-20231017173458060.png)
+![image-20231017173458060](./img/image-20231017173458060.png)
 
 
 ### [阿里云服务器是如何实现每台服务器都是公网IP的呢?](https://it.sohu.com/a/701269221_121751176)
@@ -328,3 +328,4 @@ EINTR EAGAIN应该continue
 
 
 
+# [服务器网站部署](https://mp.weixin.qq.com/s/Xfcv3vnlkrKDz4OTAA8_RQ)

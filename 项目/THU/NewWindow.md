@@ -16,7 +16,7 @@ pylon和相机型号
 
 
 
-```
+```python
 
 from pypylon import pylon
 import cv2
@@ -106,7 +106,7 @@ cv2.destroyAllWindows()
 
 
 
-```c
+```python
 import pypylon.pylon as py
 import numpy as np
 import cv2
@@ -184,3 +184,6 @@ cam.Close()
 
 ```
 
+第一次调试
+
+![image-20241106161020485](E:\codenotes\项目\THU\img\image-20241106161020485.png)

@@ -1404,9 +1404,7 @@ def ReadAI(s):
 
 
 
-> 粉末激光熔覆熔池行为的视觉
->
-> 监测与特征提取
+> 粉末激光熔覆熔池行为的视觉监测与特征提取
 >
 > Vision detection and feature extraction 
 >
@@ -1414,7 +1412,13 @@ def ReadAI(s):
 >
 > laser cladding
 >
-> 中值滤波在去除随机噪声                            a
+> 中值滤波在去除随机噪声   
+>
+> 董方煜，陈永雄，孔令超， 梁秀兵，王开心 
+>
+> 军事科学院国防科技创新研究院 ， 长沙理工大学汽车与机械工程学院
+
+> 
 
 
 
@@ -1463,3 +1467,7 @@ def ReadAI(s):
 [安装](https://blog.csdn.net/qq_43278558/article/details/139946850)
 
 ![image-20241025195042040](img/image-20241025195042040.png)
+
+# 极小洞
+
+![image-20241113164904407](E:\codenotes\项目\THU\img\image-20241113164904407.png)

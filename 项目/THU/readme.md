@@ -860,6 +860,10 @@ SAM分割进程-->>主界面进程:分割结果
 
 <img src=".\img\image-20240517104105636.png" alt="image-20240517104105636" style="zoom:50%;" />
 
+
+
+
+
 #### SAM
 
 > 原项目地址https://github.com/facebookresearch/segment-anything
