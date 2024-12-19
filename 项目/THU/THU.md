@@ -1458,7 +1458,30 @@ def ReadAI(s):
 
 椭圆拟合和W计算和估计
 
+## 拟合算法问题
 
+给了108组数据但是很多的熔池的形态，图像整体亮度都有很大的差异
+
+之前的算法可以处理那一组但是无法兼容108组，算法需要优化
+
+1. 椭圆拟合算法不能加约束估计出来的和先验不一致问题
+2. 添加先验mask，右侧的弧线难以提取问题
+
+![image-20241121152612378](E:\codenotes\项目\THU\img\image-20241121152612378.png)
+
+![image-20241121152642847](E:\codenotes\项目\THU\img\image-20241121152642847.png)
+
+![image-20241121152655655](E:\codenotes\项目\THU\img\image-20241121152655655.png)
+
+![image-20241121152712604](E:\codenotes\项目\THU\img\image-20241121152712604.png)
+
+![image-20241121154929984](E:\codenotes\项目\THU\img\image-20241121154929984.png)
+
+![image-20241121170403333](E:\codenotes\项目\THU\img\image-20241121170403333.png)
+
+![image-20241122110751574](E:\codenotes\项目\THU\img\image-20241122110751574.png)
+
+![image-20241122160641437](E:\codenotes\项目\THU\img\image-20241122160641437.png)
 
 # 同步开发
 
@@ -1471,3 +1494,38 @@ def ReadAI(s):
 # 极小洞
 
 ![image-20241113164904407](E:\codenotes\项目\THU\img\image-20241113164904407.png)
+
+#1
+
+![image-20241118103342837](E:\codenotes\项目\THU\img\image-20241118103342837.png)
+
+#2
+
+![image-20241118103644841](E:\codenotes\项目\THU\img\image-20241118103644841.png)
+
+#2-2
+
+![image-20241118103813391](E:\codenotes\项目\THU\img\image-20241118103813391.png)
+
+#3-  -1
+
+![image-20241118103937364](E:\codenotes\项目\THU\img\image-20241118103937364.png)
+
+#3-1
+
+![image-20241118104252660](E:\codenotes\项目\THU\img\image-20241118104252660.png)
+
+#3-1-2
+
+![image-20241118104431775](E:\codenotes\项目\THU\img\image-20241118104431775.png)
+
+#3-3
+
+![image-20241118104647676](E:\codenotes\项目\THU\img\image-20241118104647676.png)
+
+#4
+
+![image-20241118105217456](E:\codenotes\项目\THU\img\image-20241118105217456.png)
+
+## 
+
